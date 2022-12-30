@@ -1,2 +1,0 @@
-# JS
-Primeiro código JS 
