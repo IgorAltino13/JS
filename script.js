@@ -30,11 +30,25 @@ console.log(nomeCompleto);
 let vel = Math.floor(Math.random()*91);
 let cinto = Math.floor(Math.random() * 2);
 console.log(cinto);
-if(vel >= 60 && (!cinto)){
+if(vel >= 80 || (!cinto)){
+    console.log(`Você foi multado, sua velocidade era de ${vel} km/h`);
+}
+else if(vel <= 30 || (!cinto)){
     console.log(`Você foi multado, sua velocidade era de ${vel} km/h`);
 }
 else{
     console.log(`Você não foi multado, sua velocidade era de ${vel} km/h`);
 }
+
+
+ //condicional ternario --Sistema de login +frete
+
+ let name = 'Igor';
+ let lastname = 'Barbosa';
+let isMember = true;
+
+let verify = ((`${name} ${lastname}` === 'Igor Barbosa') && isMember === true) ? console.log("Você é um membro") :
+console.log("Você não é um membro");
+
 
 
