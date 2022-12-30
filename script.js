@@ -2,8 +2,8 @@
 //1. Crie uma variavel para armazenar o nome
 //do carro e ponha o valor Ferrari. E exiba-a
 
-let nome = "Ferrari";
-console.log(nome);
+let marca = "Ferrari";
+console.log(marca);
 
 //2. Crie uma variavel para armazenar o preço
 //do bolo, que custa R$ 19,99.E exiba-a
@@ -16,3 +16,25 @@ console.log(preco);
 
 let cidade = "São Paulo";
 console.log(cidade);
+
+//Template String
+
+let nome = "Igor";
+let sobrenome = "Altino"
+let nomeCompleto = `Seu nome completo é ${nome} ${sobrenome} e voce mora na cidade de ${cidade}`;
+console.log(nomeCompleto);
+
+
+//Condicionais: Simples radar
+
+let vel = Math.floor(Math.random()*91);
+let cinto = Math.floor(Math.random() * 2);
+console.log(cinto);
+if(vel >= 60 && (!cinto)){
+    console.log(`Você foi multado, sua velocidade era de ${vel} km/h`);
+}
+else{
+    console.log(`Você não foi multado, sua velocidade era de ${vel} km/h`);
+}
+
+
