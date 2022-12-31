@@ -51,4 +51,24 @@ let verify = ((`${name} ${lastname}` === 'Igor Barbosa') && isMember === true) ?
 console.log("Você não é um membro");
 
 
+//Implementando um switch
 
+let arrayProfession = ['fireFighter','cop','doctor','driver'];
+let sorteio = Math.floor(Math.random()*4);
+let profession = arrayProfession[sorteio];
+console.log(`Your profession is: ${profession}`);
+switch(profession){
+    case 'fireFighter':
+        console.log("Your shirt is red");
+        break;
+    case 'cop':
+        console.log("Your shirt is blue");
+        break;
+    case 'doctor':
+        console.log("Your shirt is white");
+        break;
+    default:
+        console.log("Your shirt is black");
+        break;
+
+}
