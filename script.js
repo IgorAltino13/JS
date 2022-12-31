@@ -72,3 +72,82 @@ switch(profession){
         break;
 
 }
+
+//Implementando funçoes 
+
+function discoverRoot(number){
+    return Math.sqrt(number);
+}
+
+let number = Math.floor(Math.random()*50);
+let Root = discoverRoot(number);
+console.log(`Seu número é ${number} e sua raiz quadrada é ${Root}`);
+
+//maior ou menor de idade
+
+let idade = Math.floor(Math.random()*80);
+
+//let test = (idade < 18)? console.log(`Você têm ${idade} anos, logo você é menor de idade`) : 
+//console.log(`Você têm ${idade} anos, logo você é maior de idade`)
+
+function verifyAge(idade){
+    if(idade < 18){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+if(verifyAge(idade)){
+    console.log(`Você têm ${idade} anos, logo você é menor de idade`);
+}
+else{
+    console.log(`Você têm ${idade} anos, logo você é maior de idade`);
+}
+
+//calculo de porcentagem
+
+function verificaPorcentagem(numero,porcentagem){
+    return ((numero*porcentagem)/100);
+}
+
+let numero = Math.floor(Math.random()*301);
+let porcentagem = Math.floor(Math.random()*101);
+
+let verificado =  verificaPorcentagem(numero,porcentagem);
+console.log(`${porcentagem}% de ${numero} é ${verificado}`);
+
+/*calculo preço do imovel
+-m^2 = 3000
+-Se tiver 1 quarto, o m^2 é 1x
+-Se tiver 2 quartos, o m^2 é 1,2x
+-Se tiver 3 quartos, o m^2 é 1.5x
+*/
+
+function vericaPreco(metros,quartos){
+    switch(quartos){
+        case 1:
+            return metros * m2;
+            break;
+        case 2:
+            return metros*1.2 *m2;
+            break;
+        case 3:
+            return metros*1.5* m2;
+            break;
+        default:
+            return metros *m2;
+            break;
+    }
+}
+
+let metros = Math.floor(Math.random()*201);
+let quartos = Math.floor(Math.random()*3)+1;
+const m2 = 3000;
+
+let preco1 = vericaPreco(metros,quartos).toFixed(2);
+console.log(`O número de quartos é ${quartos}, o número de metros é ${metros}, e o preço da casa é de ${preco1}`);
+
+
+
