@@ -159,3 +159,46 @@ let number1 = randomNumber();
 let number2 = randomNumber();
 let sum = addNumbers(number1,number2);
 console.log(`A soma de ${number1} com ${number2} é ${sum}`);
+
+//soma de elementos de um array
+
+/*
+let array = [15,20,27];
+let aux = 0;
+for(i=0;i<array.length;i++){
+    aux += array[i];
+}
+
+for(i=0;i<array.length;i++){
+    console.log(array[i]);
+}
+console.log(`A soma dos elementos é ${aux}`);
+
+*/
+
+//menor elemento de um array
+
+let array = [5,-2,20];
+let aux =0;
+let menor = array[0];
+for(i=0;i < array.length;i++){
+   if(menor < array[i]){
+    menor = menor;
+   }
+   else{
+    menor = array[i];
+   }
+}
+console.log(`O menor número é ${menor}`);
+
+//adicionando elementos em um array
+
+let ingredientes = ['agua','leite','ovo','azeite'];
+
+ingredientes.push('Uva');
+ingredientes.push('Carne');
+ingredientes.pop();
+ingredientes.shift();
+console.log(ingredientes);
+
+//
