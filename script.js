@@ -149,5 +149,13 @@ const m2 = 3000;
 let preco1 = vericaPreco(metros,quartos).toFixed(2);
 console.log(`O número de quartos é ${quartos}, o número de metros é ${metros}, e o preço da casa é de ${preco1}`);
 
+//Criando um arrow function 
+const randomNumber = () => Math.floor(Math.random()*201);
+const addNumbers = (number1,number2) => number1 + number2; 
+   
 
 
+let number1 = randomNumber();
+let number2 = randomNumber();
+let sum = addNumbers(number1,number2);
+console.log(`A soma de ${number1} com ${number2} é ${sum}`);
