@@ -288,7 +288,45 @@ let new_array = [];
 console.log(new_array);
 */
 
-cars.sort((a,b) => a.year-b.year
+cars.sort((a,b) => {
+    if(a.brand > b.brand){
+        return 1;
+    }
+    else if(a.brand < b.brand){
+        return -1;
+    }
+    else{
+        return 0;
+    }
+}
 );
 
 console.log(cars);
+
+//iteração de array
+
+let fruits1 = ['aplle','pineaplle','orange','banana','pear','strawberry','mango'];
+
+//filtra as frutas que tem menos de 5 caracteres
+let smallFruits = fruits1.filter((item) => item.length <= 4
+);
+
+//mostra se todos os elementos do array tem mais de 3 caracteres
+let ok = fruits1.every((value) => {
+    return value.length > 3;
+})
+console.log(ok);
+
+//suponha que você seja um desenvolvedor e tenha que verificar se um nome consta no banco de dados
+
+let banco = ['Igor','Mario','Tesla','Hugo'];
+if(banco.includes('Igor')){
+    console.log("Foi achado o nome procurado");
+}
+else{
+    console.log("O nome não consta no banco de dados");
+}
+
+document.querySelectorAll("h1").innerHTML="Ola mundo 2.9";
+
+
