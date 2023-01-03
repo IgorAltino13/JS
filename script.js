@@ -201,4 +201,94 @@ ingredientes.pop();
 ingredientes.shift();
 console.log(ingredientes);
 
-//
+//Criando um objeto
+
+let fiat = {
+    carros: ['Palio','Fiorino','Cronos'],
+    fundadores: ['Giovanni Agnelli','Igor Altino'],
+    pais: 'Itália',
+    caracteristicas: {
+        influencia: 90,
+        venda: 80,
+        satisfacao: 60
+    }
+}
+console.log(`A fiat tem como fundadores ${fiat.fundadores[0]} e ${fiat.fundadores[1]},foi fundada na ${fiat.pais} e alguns de seus carros marcantes
+    são ${fiat.carros}.Tem ${fiat.caracteristicas.influencia}% de influência, ${fiat.caracteristicas.venda}% de conversão de vendas
+    e uma satisfação de ${fiat.caracteristicas.satisfacao}% de acordo com seus clientes.`);
+
+//adicionando informaçoes no objeto
+
+fiat.fundadores.push('CR7');
+fiat.caracteristicas.satisfacao += 10; 
+
+console.log(`A fiat tem como fundadores ${fiat.fundadores[0]} e ${fiat.fundadores[1]},foi fundada na ${fiat.pais} e alguns de seus carros marcantes são ${fiat.carros}.Tem ${fiat.caracteristicas.influencia}% de influência, ${fiat.caracteristicas.venda}% de conversão de vendas e uma satisfação de ${fiat.caracteristicas.satisfacao}% de acordo com seus clientes.No ano de 2017 ${fiat.fundadores[2]} entrou para o time, o que fez a satisfação dos cliente irem para ${fiat.caracteristicas.satisfacao}%`);
+
+
+//criando uma mini hamburgueria
+
+let hamburgueres = [{nome:'McFish',preco: 12.5,ingredientes: ['Peixe','batata frita','chedar']},{nome: 'Big Mac',preco: 15.2,ingredientes: ['Pão','carne de boi','cheddar','batata palha']}
+,{nome: 'McChicken',preco: 13.4,ingredientes:['Pão','Frango','Cheddar','Batata palha']}];
+
+console.log(hamburgueres[0].ingredientes);
+
+//criando função dentro de um objeto
+
+let person = {
+    name: 'Igor',
+    lastname: 'Altino',
+    age: 20,
+    phoneNumber: 31986783447,
+    getFullName : function(){
+        return `${this.name} ${this.lastname}`;
+    }
+}
+
+let fullName = person.getFullName();
+console.log(fullName);
+
+//criando diferentes maneiras do for
+
+let cores = [{nome: 'Preto',qtd:10},{nome: 'Vermelho',qtd:5},{nome: 'Amarelo',qtd:7}];
+/*
+for(let i =0;i<cores.length;i++){
+    console.log(cores[i]);
+}
+*/
+/*
+for(let i in cores){
+    console.log(cores[i]);
+}
+*/
+
+for(let value of cores){
+    console.log(`Cor:${value.nome},quantidade:${value.qtd}`);
+}
+
+//ordenando arrays
+
+let fruits = ['apple','orange','grape'];
+fruits[fruits.length-1] = 'pineaplle'; 
+fruits.sort();
+let separa = fruits.join('-');
+console.log(separa);
+
+ let cars = [{
+    brand: 'Fiat',year:2002
+ },{brand:'Bmw',year:2018},{brand:'Ferrari',year:2001}];
+
+ //ordena o ano
+
+/*
+let new_array = [];
+ for(let i in cars){
+    new_array[i] = cars[i].year;
+ }
+ new_array.sort();
+console.log(new_array);
+*/
+
+cars.sort((a,b) => a.year-b.year
+);
+
+console.log(cars);
